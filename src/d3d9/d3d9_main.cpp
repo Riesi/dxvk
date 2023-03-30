@@ -29,7 +29,7 @@ extern "C" {
   DLLEXPORT IDirect3D9* __stdcall Direct3DCreate9(UINT nSDKVersion) {
     IDirect3D9Ex* pDirect3D = nullptr;
     dxvk::CreateD3D9(false, &pDirect3D);
-
+        __asm__("int $3");
     return pDirect3D;
   }
 
